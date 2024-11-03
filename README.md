@@ -44,7 +44,7 @@ pip install flask transformers requests beautifulsoup4 torch scipy matplotlib
 ```
 ### 3. Download model file
 
-Download tge model using [link](https://drive.google.com/file/d/1n-0TP6L7Z7NFp_a7tQd2qsLgI5YtYi3B/view?usp=sharing).  Place it in [project_path]/saved_bert_model. 
+Download the model using [link](https://drive.google.com/file/d/1n-0TP6L7Z7NFp_a7tQd2qsLgI5YtYi3B/view?usp=sharing).  Place it in [project_path]/saved_bert_model. 
 ### 4. Run the Application
 
 Start the Flask application by running `app.py`.
