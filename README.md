@@ -37,17 +37,15 @@ Download the fine-tuned BERT model files from [MODEL_DOWNLOAD_WEBSITE](https://m
 
 Navigate to the project directory and install the required dependencies.
 
-```bash
-pip install -r requirements.txt
-```
-
 Alternatively, you can install packages manually:
 
 ```bash
 pip install flask transformers requests beautifulsoup4 torch scipy matplotlib
 ```
+### 3. Download model file
 
-### 3. Run the Application
+Download tge model using [link](https://drive.google.com/file/d/1n-0TP6L7Z7NFp_a7tQd2qsLgI5YtYi3B/view?usp=sharing).  Place it in [project_path]/saved_bert_model. 
+### 4. Run the Application
 
 Start the Flask application by running `app.py`.
 
@@ -55,7 +53,7 @@ Start the Flask application by running `app.py`.
 python app.py
 ```
 
-### 4. Access the Web Application
+### 5. Access the Web Application
 
 Once the server is running, open a web browser and navigate to `http://127.0.0.1:5000` to access the application. If you want to access it from other devices on your local network, find your local IP address (e.g., `192.168.x.x`) and use it as follows: `http://192.168.x.x:5000`.
 
