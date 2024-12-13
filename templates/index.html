@@ -5,50 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yelp Sentiment Analyzer</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
+      /* Global Reset */
+      * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body Styling */
+      body {
+        font-family: "Roboto", sans-serif;
+        background: linear-gradient(135deg, #ffd4d4, #feb1b1);
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-      }
-      .container {
-        background-color: white;
         padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 300px;
-        border-radius: 8px;
       }
-      input[type="url"],
+
+      /* Card Container */
+      .container {
+        background: white;
+        padding: 40px 30px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+        animation: fadeIn 0.5s ease-out;
+      }
+
+      /* Header Styling */
+      h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      /* Input Fields */
+      input[type="url"] {
+        width: 100%;
+        padding: 12px 15px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      input[type="url"]:focus {
+        border-color: #ffa8a8;
+        outline: none;
+        box-shadow: 0 0 4px rgba(255, 105, 105, 0.4);
+      }
+
+      /* Submit Button */
       input[type="submit"] {
         width: 100%;
-        padding: 10px;
-        margin: 10px 0;
+        padding: 12px 15px;
+        background: #ff6b6b;
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
       }
-      .error {
-        color: red;
-        margin-top: 10px;
+
+      input[type="submit"]:hover {
+        background: #ff3f3f;
+        transform: scale(1.02);
+      }
+
+      /* Subtle Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h2>Enter Yelp Link</h2>
+      <h2>Yelp Sentiment Analyzer</h2>
       <form action="/" method="POST">
         <input
           type="url"
           name="yelp_url"
-          placeholder="Yelp Restaurant Link"
+          placeholder="Enter Yelp Restaurant URL"
           required
         />
-        <input type="submit" value="Analyze" />
+        <input type="submit" value="Analyze Now" />
       </form>
-      {% if error %}
-      <div class="error">{{ error }}</div>
-      {% endif %}
     </div>
   </body>
 </html>
